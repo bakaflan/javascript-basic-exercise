@@ -8,7 +8,7 @@ export default function formatNumber(number, option) {
   // * Please implement the function and pass all the tests in format_number_spec.js.
   // * Please do NOT modify the signature of the function.
   let formatNum = number.toFixed(2).toString();
-  if (typeof (option) !== 'undefined') {
+  if (option) {
     if (option.currency === true) {
       formatNum = `$ ${formatNum}`;
     }

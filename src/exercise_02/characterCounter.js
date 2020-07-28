@@ -6,10 +6,10 @@ export default function countCharacter(string, prediction) {
   // * Please implement this function and pass all the tests in character_counter_spec.js.
   // * Please do NOT modify the signature of the function.
 
-  if (typeof (string) !== 'string') {
+  if (!string) {
     return 0;
   }
-  if (typeof (prediction) !== 'undefined') {
+  if (typeof (prediction) === 'function') {
     return string.split('').filter(prediction).length;
   }
   return string.length;
